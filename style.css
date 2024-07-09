@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  position: relative;
+  font-family: sans-serif;
+}
+.buttons {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  min-height: 100svh;
+  place-items: center;
+  gap: 1em;
+  padding: 1em;
+  margin-inline: auto;
+  width: clamp(320px, 100%, 500px);
+}
+button {
+  color: white;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+}
+.do {
+  border: 2px solid blue;
+}
+.do:active {
+  background-color: blue;
+}
+.do.active {
+  background-color: blue;
+}
+.re {
+  border: 2px solid red;
+}
+.re:active {
+  background-color: red;
+}
+.mi {
+  border: 2px solid blue;
+}
+.mi:active {
+  background-color: blue;
+}
+.fa {
+  border: 2px solid red;
+}
+.fa:active {
+  background-color: red;
+}
+.sol {
+  border: 2px solid green;
+}
+.sol:active {
+  background-color: green;
+}
+.la {
+  border: 2px solid red;
+}
+.la:active {
+  background-color: red;
+}
+.si {
+  border: 2px solid blue;
+}
+.si:active {
+  background-color: blue;
+}
+.do2 {
+  border: 2px solid red;
+}
+.do2:active {
+  background-color: red;
+}
+.re2 {
+  border: 2px solid blue;
+}
+.re2:active {
+  background-color: blue;
+}
+
+.tutorial {
+  background-color: black;
+  color: blue;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  padding: 1em;
+}
+
+.tutorial div {
+  display: flex;
+  width: clamp(320px, 100%, 500px);
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.tutorial h1 {
+  text-align: center;
+}
+
+.tutorial p {
+  color: green;
+  text-align: justify;
+}
+
+.tutorial button {
+  padding: 1em;
+  border: 1px solid red;
+  color: red;
+  border-radius: 0.5em;
+  transition: background-color 0.3s ease-out;
+}
+
+.tutorial button:hover {
+  color: black;
+  background-color: red;
+}

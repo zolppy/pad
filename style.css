@@ -3,101 +3,86 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: black;
-  position: relative;
   font-family: sans-serif;
+  position: relative;
 }
+
 .tiles {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  min-height: 100svh;
-  place-items: center;
   gap: 1em;
-  padding: 1em;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   margin-inline: auto;
+  min-height: 100svh;
+  padding: 1em;
+  place-items: center;
   width: clamp(320px, 100%, 500px);
 }
+
 button {
-  color: white;
   background-color: inherit;
-  width: 100%;
+  color: white;
   height: 100%;
+  width: 100%;
 }
+
 .tile:first-child {
   border: 2px solid blue;
 }
-.tile:first-child.active {
-  background-color: blue;
-}
+
 .tile:nth-child(2) {
   border: 2px solid red;
 }
-.tile:nth-child(2).active {
-  background-color: red;
-}
+
 .tile:nth-child(3) {
   border: 2px solid blue;
 }
-.tile:nth-child(3).active {
-  background-color: blue;
-}
+
 .tile:nth-child(4) {
   border: 2px solid red;
 }
-.tile:nth-child(4).active {
-  background-color: red;
-}
+
 .tile:nth-child(5) {
   border: 2px solid green;
 }
-.tile:nth-child(5).active {
-  background-color: green;
-}
+
 .tile:nth-child(6) {
   border: 2px solid red;
 }
-.tile:nth-child(6).active {
-  background-color: red;
-}
+
 .tile:nth-child(7) {
   border: 2px solid blue;
 }
-.tile:nth-child(7).active {
-  background-color: blue;
-}
+
 .tile:nth-child(8) {
   border: 2px solid red;
 }
-.tile:nth-child(8).active {
-  background-color: red;
-}
-.tile:nth-child(9) {
+
+.tile:last-child {
   border: 2px solid blue;
-}
-.tile:nth-child(9).active {
-  background-color: blue;
 }
 
 .tutorial {
   background-color: black;
   color: blue;
-  width: 100%;
+  display: grid;
   height: 100%;
   left: 0;
-  top: 0;
-  position: absolute;
-  display: grid;
-  place-items: center;
-  z-index: 1;
   padding: 1em;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .tutorial div {
   display: flex;
-  width: clamp(320px, 100%, 500px);
   flex-direction: column;
   row-gap: 1em;
+  width: clamp(320px, 100%, 500px);
 }
 
 .tutorial h1 {
@@ -110,10 +95,10 @@ button {
 }
 
 .tutorial button {
-  padding: 1em;
   border: 1px solid red;
-  color: white;
   border-radius: 0.5em;
+  color: white;
+  padding: 1em;
   transition: background-color 0.3s ease-out;
 }
 

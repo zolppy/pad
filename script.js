@@ -28,10 +28,10 @@ const colors = [
 
 const keys = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
 
-notes.forEach((note, index) => {
-  note.addEventListener("click", () => {
+notes.forEach((item, index) => {
+  item.addEventListener("click", function () {
     new Audio(paths[index]).play();
-    effect(note, colors[index]);
+    effect(this, colors[index]);
   });
 });
 
@@ -49,7 +49,6 @@ body.addEventListener("keypress", (event) => {
   keys.forEach((item, index) => {
     if (item === key) {
       notes[index].click();
-      effect(notes[index]);
     }
   });
 });
